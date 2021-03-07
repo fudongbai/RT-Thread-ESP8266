@@ -59,8 +59,8 @@ if PLATFORM == 'gcc':
     CFLAGS = DEVICE
     AFLAGS = DEVICE
     LFLAGS = ' -Wl,--gc-sections -nostdlib'
-    LFLAGS += ' -T ./Libraries/ld/eagle.app.v6.new.1024.app1.ld'
-    LFLAGS += ' -T./Libraries/ld/eagle.app.v6.common.ld' + ' -T./Libraries/ld/eagle.rom.addr.v6.ld'
+    LFLAGS += ' -T ./libraries/ld/eagle.app.v6.new.1024.app1.ld'
+    LFLAGS += ' -T./libraries/ld/eagle.app.v6.common.ld' + ' -T./libraries/ld/eagle.rom.addr.v6.ld'
     LFLAGS += ' -Wl,--no-check-sections -Wl,-static -u,call_user_start'
 
     CPATH = ''

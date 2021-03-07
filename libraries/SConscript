@@ -10,7 +10,7 @@ src = Split("""
     driver_lib/driver/drv_uart.c
 """)
 
-path = [cwd + '/include/espressif', 
+path = [cwd + '/include/espressif',
     cwd + '/extra_include',
 	cwd + '/include',    
 	cwd + '/include/freertos',
@@ -26,6 +26,6 @@ LIBPATH = [cwd + '/lib']
 
 CPPDEFINES = ['ICACHE_FLASH']
 #'MEMLEAK_DEBUG', 'ICACHE_FLASH'
-group = DefineGroup('Libraries', src, depend = [''], CPPPATH = path, CPPDEFINES = CPPDEFINES, LIBS = LIBS, LIBPATH = LIBPATH)
+group = DefineGroup('libraries', src, depend = [''], CPPPATH = path, CPPDEFINES = CPPDEFINES, LIBS = LIBS, LIBPATH = LIBPATH)
 
 Return('group')

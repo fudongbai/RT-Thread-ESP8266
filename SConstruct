@@ -19,7 +19,7 @@ env = Environment(tools = ['mingw'],
 	LINK = rtconfig.LINK, LINKFLAGS = rtconfig.LFLAGS)
 env.PrependENVPath('PATH', rtconfig.EXEC_PATH)
 
-convert = 'python ./Libraries/tools/gen_appbin.py rtthread-esp8266.out' + ' 2' + ' 0' + ' 0' + ' 2'
+convert = 'python ./libraries/tools/gen_appbin.py rtthread-esp8266.out' + ' 2' + ' 0' + ' 0' + ' 2'
 cvt= Builder(action = convert)
 
 if rtconfig.PLATFORM == 'iar':
