@@ -50,7 +50,7 @@ if PLATFORM == 'gcc':
     AS = PREFIX + 'gcc'
     AR = PREFIX + 'ar'
     LINK = PREFIX + 'gcc'
-    TARGET_EXT = 'out'
+    TARGET_EXT = 'elf'
     SIZE = PREFIX + 'size'
     OBJDUMP = PREFIX + 'objdump'
     OBJCPY = PREFIX + 'objcopy'
@@ -72,7 +72,7 @@ if PLATFORM == 'gcc':
     else:
         CFLAGS += ' -O2'
 
-POST_ACTION = OBJDUMP + ' -x -s $TARGET > rtthread-esp8266.dump\n' + \
+POST_ACTION = OBJDUMP + ' -x -s $TARGET > rtthread.dump\n' + \
                 OBJDUMP + ' -S $TARGET > rtthread-esp8266.S\n' + \
                 OBJCPY + ' --only-section .text -O binary $TARGET eagle.app.v6.text.bin \n' + \
                 OBJCPY + ' --only-section .data -O binary $TARGET eagle.app.v6.data.bin\n' + \

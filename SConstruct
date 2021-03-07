@@ -10,7 +10,7 @@ else:
 sys.path = sys.path + [os.path.join(RTT_ROOT, 'tools')]
 from building import *
 
-TARGET = 'rtthread-esp8266.' + rtconfig.TARGET_EXT
+TARGET = 'rtthread.' + rtconfig.TARGET_EXT
 
 env = Environment(tools = ['mingw'],
 	AS = rtconfig.AS, ASFLAGS = rtconfig.AFLAGS,
@@ -19,7 +19,7 @@ env = Environment(tools = ['mingw'],
 	LINK = rtconfig.LINK, LINKFLAGS = rtconfig.LFLAGS)
 env.PrependENVPath('PATH', rtconfig.EXEC_PATH)
 
-convert = 'python ./libraries/tools/gen_appbin.py rtthread-esp8266.out' + ' 2' + ' 0' + ' 0' + ' 2'
+convert = 'python ./libraries/tools/gen_appbin.py rtthread.elf' + ' 2' + ' 0' + ' 0' + ' 2'
 cvt= Builder(action = convert)
 
 if rtconfig.PLATFORM == 'iar':
