@@ -90,6 +90,11 @@ clear            - clear the terminal screen
 ```
 
 
+This port has been tested on [NODEMCU-8266 V1.2][nodemcu]:
+![Front](assets/front.jpg)
+![Back](assets/back.jpg)
+
 
 [sdk]: https://github.com/pfalcon/esp-open-sdk
 [esptool]: https://github.com/espressif/esptool
+[nodemcu]: https://m.tb.cn/h.4lrVlUJ
