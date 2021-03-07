@@ -21,7 +21,7 @@ path = [cwd + '/include/espressif',
 
 path += [cwd + '/driver_lib/include']
 
-LIBS = ['minic', 'gcc', 'hal', 'phy', 'pp', 'net80211', 'wpa', 'crypto', 'main', 'espconn', 'smartconfig', 'airkiss', 'lwip']
+LIBS = ['minic', 'gcc', 'hal', 'phy', 'pp', 'net80211', 'wpa', 'crypto', 'main', 'lwip']
 LIBPATH = [cwd + '/lib']
 
 CPPDEFINES = ['ICACHE_FLASH']
