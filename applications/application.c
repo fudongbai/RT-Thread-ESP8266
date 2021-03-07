@@ -40,7 +40,7 @@ void rt_init_thread_entry(void* parameter)
     finsh_system_init();
 #endif
 
-#if 1
+#if 0
     wifi_set_opmode_current(STATION_MODE);
 
 //    wifi_station_set_auto_connect(TRUE);
