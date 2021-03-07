@@ -91,8 +91,7 @@ clear            - clear the terminal screen
 
 
 This port has been tested on [NODEMCU-8266 V1.2][nodemcu]:
-![Front](assets/front.png?raw=true)
-![Back](assets/back.png?raw=true)
+![NodeMCU](assets/nodemcu.png?raw=true)
 
 
 [sdk]: https://github.com/pfalcon/esp-open-sdk
