@@ -12,7 +12,7 @@ src = Split("""
 
 path = [cwd + '/include/espressif',
     cwd + '/extra_include',
-	cwd + '/include',    
+	cwd + '/include',
 	cwd + '/include/freertos',
     cwd + '/include/lwip',
     cwd + '/include/lwip/arch',

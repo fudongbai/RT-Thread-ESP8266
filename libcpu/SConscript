@@ -3,10 +3,7 @@ Import('rtconfig')
 from building import *
 
 cwd     = os.path.join(str(Dir('#')), 'lib')
-src = Split("""
-libcpu.c
-fmq.c
-""")
+src = Glob('*.c')
 
 CPPPATH = [cwd]
 
