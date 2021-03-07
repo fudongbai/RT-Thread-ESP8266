@@ -1,0 +1,7 @@
+build
+rtthread.bin
+.sconsign.dblite
+cconfig.h
+*.pyc
+rtthread-esp8266.S
+rtthread-esp8266.dump
