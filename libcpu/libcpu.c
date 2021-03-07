@@ -318,18 +318,18 @@ void rt_hw_interrupt_enable(rt_base_t level)
  * Context interfaces
  */
 
- void rt_hw_context_switch_to(rt_uint32_t to)
+ void rt_hw_context_switch_to(rt_ubase_t to)
 {
     pxSaveTCB = (portSTACK_TYPE *)to;
 }
 
-void rt_hw_context_switch(rt_uint32_t from, rt_uint32_t to)
+void rt_hw_context_switch(rt_ubase_t from, rt_ubase_t to)
 {
     pxSaveTCB = (portSTACK_TYPE *)to;
     portYIELD();
 }
 
-void rt_hw_context_switch_interrupt(rt_uint32_t from, rt_uint32_t to)
+void rt_hw_context_switch_interrupt(rt_ubase_t from, rt_ubase_t to)
 {
     pxSaveTCB = (portSTACK_TYPE *)to;
     portEND_SWITCHING_ISR(1);
@@ -720,10 +720,10 @@ void rtthread_startup(void)
 	rt_show_version();
 
 	/* init tick */
-	rt_system_tick_init();
+	/* rt_system_tick_init(); */
 
 	/* init kernel object */
-	rt_system_object_init();
+	/* rt_system_object_init(); */
 
 	/* init timer system */
 	rt_system_timer_init();

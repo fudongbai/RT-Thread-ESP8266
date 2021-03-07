@@ -74,6 +74,7 @@ extern "C" {
 #endif /* LWIP_UNUSED_ARG */ 
 
 
+#undef LWIP_PROVIDE_ERRNO
 #ifdef LWIP_PROVIDE_ERRNO
 
 #define  EPERM         1  /* Operation not permitted */
